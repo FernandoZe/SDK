@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+
+  <title>Pruebas SDK</title>
+</head>
+
+<body>
+<form id="frmPay" novalidate>
+  <div id="root">
+    <div class="mt-5 mb-5">
+      <div class="container">
+        <div class="justify-content-center row">
+          <div class="col-xl-7 col-lg-8 col-md-10">
+            <form>
+              <div class="card mb-1">
+                <div class="card-body">
+                  <h5 class="card-title">Configuración</h5>
+
+                  <div class="row align-items-start">
+                    <div class="col-md-3">
+                      <label class="form-label">ID de comercio</label>
+                      <input required type="text" class="form-control" name="accountId"
+                             placeholder="62c7d1d6e211..."
+                             value="">
+                    </div>
+
+                    <div class="col-md-3">
+                      <label class="form-label">Token</label>
+                      <input required type="text" class="form-control" name="accountToken"
+                             placeholder="eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9..."
+                             value="">
+                    </div>
+
+                    <div class="col-md-3">
+                      <label class="form-label">Ambiente</label>
+                      <select required class="form-select" name="endpoint" aria-label="Ambiente">
+                        <option value="https://dev.paygatehn.com">Desarrollo</option>
+                        <option value="https://stage.paygatehn.com">Pruebas</option>
+                        <option value="https://api.paygatehn.com">Producción</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-3">
+                      <label class="form-label">Bitacora</label>
+                      <select class="form-select" name="logs" aria-label="Ambiente">
+                        <option value="true">Si</option>
+                        <option value="false">No</option>
+                      </select>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown-divider" role="separator"></div>
+
+              <div class="card">
+                <div class="card-body align-items-start">
+                  <div class="row">
+                    <h5 class="card-title text-uppercase">Datos personales</h5>
+
+                    <div class="mb-1 row">
+                      <div class="col-md-12">
+                        <label for="firstName" class="form-label">Nombre de cliente</label>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <input class="form-control form-control-sm" type="text"
+                                   data-billing="customerFirstName" name="customerFirstName"
+                                   id="firstName" placeholder="nombre" value="">
+                          </div>
+
+                          <div class="col-md-6">
+                            <input class="form-control form-control-sm" type="text"
+                                   id="customerLastName" name="customerLastName"
+                                   data-billing="customerLastName" placeholder="apellido"
+                                   value="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mb-1 row">
+                      <div class="col-md-6">
+                        <label for="mobilePhone" class="form-label">Número telefónico</label>
+                        <input class="form-control form-control-sm" type="text" id="mobilePhone"
+                               placeholder="+50499999999" data-billing="mobilePhone"
+                               name="mobilePhone" value="">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label for="email" class="form-label">Correo</label>
+                        <input class="form-control form-control-sm" type="email" id="email"
+                               placeholder="john@doe.com" name="email" data-billing="email"
+                               value="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-divider" role="separator"></div>
+
+                  <div class="row">
+                    <h5 class="card-title text-uppercase">Datos de tarjeta</h5>
+
+                    <div class="mb-1 form-group row">
+                      <label class="pb-0 form-label col-form-label col-sm-12">Nombre de la
+                        tarjeta</label>
+                      <div class="col-sm-6">
+                        <input required class="form-control form-control-sm" value="John"
+                               name="firstName" data-billing="firstName" type="text">
+                      </div>
+                      <div class="col-sm-6">
+                        <input placeholder="Nombre" class="form-control form-control-sm"
+                               value="Doe" required name="lastName" data-billing="lastName"
+                               type="text">
+                      </div>
+                    </div>
+
+
+                    <div class="mb-1 form-group row">
+                      <label class="pb-0 form-label col-form-label col">Número de tarjeta</label>
+                      <div class="col-sm-12">
+                        <input class="form-control form-control-sm" value="4000000000000002" id="normalSelect"
+                               required name="safeIdentifier" placeholder="####-####-####-####"
+                               type="text" data-billing="safeIdentifier">
+                      </div>
+                    </div>
+
+                    <div class="mb-1 row">
+                      <div class="col-sm-6">
+                        <div class="mb-1 form-group row">
+                          <label class="pb-0 form-label col-form-label col">Fecha de
+                            expiración</label>
+                          <div class="row">
+                            <div class="col-sm-4">
+                              <input required value="10" maxlength="2" name="cardExpMonth"
+                                     placeholder="MM" class="form-control form-control-sm"
+                                     data-billing="cardExpMonth">
+                            </div>
+                            <div class="col-sm-4">
+                              <input required value="25" maxlength="2" name="cardExpYear"
+                                     placeholder="AA" class="form-control form-control-sm"
+                                     data-billing="cardExpYear">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6">
+                        <div class="mb-1 form-group row">
+                          <label class="pb-0 form-label col-form-label col">CVV</label>
+                          <div class="col-sm-12">
+                            <input required maxlength="4" name="cvv" value="258" placeholder="1234"
+                                   class="form-control form-control-sm" data-billing="cvv">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-divider" role="separator"></div>
+
+                  <div class="row">
+                    <h5 class="card-title text-uppercase">Detalle de pago</h5>
+                    <div class="mb-1 form-group row">
+                      <label class="pb-0 form-label col-form-label col">Monto</label>
+                      <div class="col-sm-7">
+                        <input name="amount" type="number" value=""
+                               class="form-control form-control-sm" required
+                               data-billing="amount">
+                      </div>
+                    </div>
+
+                    <div class="mb-1 form-group row">
+                      <label class="pb-0 form-label col-form-label col">Descripción pago</label>
+                      <div class="col-sm-7">
+                        <input name="description" type="text" value=""
+                               class="form-control form-control-sm" required
+                               data-billing="description">
+                      </div>
+                    </div>
+
+                    <div class="mb-1 form-group row">
+                      <label class="pb-0 form-label col-form-label col">Referencia</label>
+                      <div class="col-sm-7">
+                        <input name="referenceId" type="text" value=""
+                               class="form-control form-control-sm" required
+                               data-billing="referenceId">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-divider" role="separator"></div>
+
+                  <div class="row">
+                    <h5 class="card-title text-uppercase">Facturación</h5>
+
+
+                    <div class="mb-1 form-group row">
+                      <label class="pb-0 form-label col-form-label col">País</label>
+                      <div class="col-sm-7" id="containerBillingCountryCode">
+                      </div>
+                    </div>
+
+                    <div class="mb-1 form-group row">
+                      <label class="pb-0 form-label col-form-label col">Departamento</label>
+                      <div class="col-sm-7" id="containerBillingState">
+                      </div>
+                    </div>
+
+                    <div class="mb-1 form-group row">
+                      <label class="pb-0 form-label col-form-label col">Ciudad</label>
+                      <div class="col-sm-7">
+                        <input name="billingCity" type="text" value="SPS"
+                               class="form-control form-control-sm"
+                               data-billing="billingCity">
+                      </div>
+                    </div>
+                    <div class="mb-1 form-group row">
+                      <label class="pb-0  form-label col-form-label col">Dirección de
+                        facturación</label>
+                      <div class="col-sm-7">
+                                                <textarea name="billingAddress1" class="form-control form-control-sm"
+                                                          value="Res. Andalucia"
+                                                          data-billing="billingAddress1"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer d-grid gap-2" id="paySection">
+                  <button type="submit" name="btnPay" class="btn btn-secondary">Pagar</button>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <div hidden="true" id="loading" class="spinner-border "></div>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+</body>
+<script src="../dist/paygate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+        integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/imask"></script>
+
+<script>
+
+  let countries = [];
+
+  IMask(
+    document.querySelector('[name="mobilePhone"]'), {
+      mask: '+{5\\04} 0000-0000'
+    });
+
+  IMask(
+    document.querySelector('[name="safeIdentifier"]'), {
+      mask: '0000-0000-0000-0000'
+    });
+
+  IMask(
+    document.querySelector('[name="cvv"]'), {
+      mask: /^[0-9]+$/
+    });
+
+
+  const divAlertMessageIdName = 'alertMessage';
+  const acceptedPayload = [
+    'cvv',
+    'email',
+    'amount',
+    'lastName',
+    'validThru',
+    'firstName',
+    'referenceId',
+    'description',
+    'mobilePhone',
+    'orderNumber',
+    'billingCity',
+    'customerName',
+    'billingState',
+    'safeIdentifier',
+    'billingAddress1',
+    'billingCountryCode',
+  ];
+
+  const loading = document.getElementById("loading");
+  const btnPay = document.querySelector('[name="btnPay"]');
+  document.querySelector('[name="referenceId"]').value = uuid.v4();
+
+  const createSelect = (attributes) => {
+    const select = document.createElement('select');
+
+    Object.keys(attributes).forEach(key => {
+      select.setAttribute(key, attributes[key]);
+    });
+
+    select.classList.add(`form-select`);
+    select.classList.add(`form-select-sm`);
+
+    return select;
+  }
+
+  const setBillingStateSelectOptions = (selectRef, states = []) => {
+    states.forEach(state => {
+      const { alpha2, name } = state;
+      const option = document.createElement('option');
+      option.value = alpha2.toString();
+      option.textContent = name;
+
+      selectRef.appendChild(option);
+    })
+  }
+
+  const getStates = (countryNumericCode) => {
+    const [states] = countries.filter(({ numericCode }) => Number(numericCode) === Number(countryNumericCode))
+      .map(countries => countries.states);
+    return states;
+  }
+
+  const init = async () => {
+    countries  =  await  Paygate.getCountriesAndStates();
+
+    const containerBillingState = document.getElementById('containerBillingState');
+    const containerBillingCountryCode = document.getElementById('containerBillingCountryCode');
+
+    const selectBillingCountryCodeAttributes = {
+      id: "billingCountryCode",
+      name: "billingCountryCode",
+      "data-billing": "billingCountryCode"
+    };
+    const selectBillingCountryCode = createSelect(selectBillingCountryCodeAttributes);
+
+    countries.forEach(function (country) {
+      const { numericCode, name } = country;
+      const option = document.createElement('option');
+      option.value = numericCode.toString();
+      option.textContent = name;
+
+      selectBillingCountryCode.appendChild(option);
+    });
+
+    containerBillingCountryCode.appendChild(selectBillingCountryCode);
+
+    const selectBillingStateAttributes = {
+      id: "billingState",
+      name: "billingState",
+      "data-billing": "billingState"
+    };
+    const selectBillingState = createSelect(selectBillingStateAttributes);
+
+    const country = document.getElementById('billingCountryCode');
+
+    const states = getStates(country.value);
+
+    setBillingStateSelectOptions(selectBillingState, states);
+    containerBillingState.appendChild(selectBillingState);
+
+    country.addEventListener('change', function (e) {
+      selectBillingState.options.length = 0;
+      const states = getStates(this.value);
+      setBillingStateSelectOptions(selectBillingState, states);
+
+    })
+
+  }
+
+  const resetValues = () => {
+    acceptedPayload.forEach(name => {
+      const input = document.querySelector(`[name=${name}]`);
+      if (input) {
+        input.value = '';
+      }
+    });
+  }
+
+  const setLoading = (isLoading) => {
+    btnPay.disabled = isLoading;
+    loading.hidden = !isLoading;
+  };
+
+  const removeAlertMessage = () => {
+    const exists = document.getElementById(divAlertMessageIdName);
+
+    if (exists) {
+      exists.parentElement.removeChild(exists);
+    }
+  }
+
+  const showMessage = (message, classAlert = 'success') => {
+
+    removeAlertMessage();
+
+    let div = document.createElement("div");
+    div.setAttribute("id", divAlertMessageIdName);
+
+    div.classList.add(`alert`);
+    div.classList.add(`alert-${classAlert}`);
+    div.classList.add('text-center');
+    div.textContent = message;
+
+    const paySection = document.getElementById('paySection');
+    paySection.appendChild(div);
+  }
+
+  const sanatizePayload = (data) => {
+    let _data = {};
+    if (!data || typeof data !== 'object') {
+      throw new Error('Se esperaba un objeto');
+    }
+
+    acceptedPayload.forEach(keyName => {
+      if (data[keyName] !== undefined) {
+        _data[keyName] = data[keyName];
+      }
+    });
+    const { amount } = _data;
+    return { ..._data, amount: Number(amount) };
+  }
+
+  init();
+
+  document.getElementById('frmPay').addEventListener('submit', async function (e) {
+    try {
+
+      if (this.checkValidity() === false) {
+        e.preventDefault();
+        e.stopPropagation();
+        this.reportValidity();
+        this.classList.add('was-validated')
+        return;
+      } else {
+        e.preventDefault();
+        this.classList.add('was-validated');
+
+      }
+
+      removeAlertMessage();
+      setLoading(true);
+
+      const endpoint = document.querySelector('[name="endpoint"]').value;
+      const accountToken = document.querySelector('[name="accountToken"]').value;
+      const debug = document.querySelector('[name="logs"]').value === 'true';
+      const accountId = document.querySelector('[name="accountId"]').value;
+
+      await Paygate.configure_ecommerce(accountId, accountToken, endpoint)
+
+      Paygate.debug(debug);
+
+      let payload = {}
+      let billingField = document.querySelectorAll('[data-billing]');
+
+      billingField.forEach(function (field) {
+        const value = field.value
+        const key = field.dataset.billing
+        payload[key] = value;
+
+      });
+
+      payload = {
+        ...payload,
+        orderNumber: uuid.v4(),
+        safeIdentifier: payload['safeIdentifier'].replace(/\D/g, ''),
+        validThru: `${payload['cardExpMonth']}/${payload['cardExpYear']}`,
+        mobilePhone: payload['mobilePhone'].replace(' ', '').replace('-', ''),
+        customerName: `${payload['customerFirstName']} ${payload['customerLastName']}`,
+      }
+
+      const { amount, transactionID } = await Paygate.payOrder(sanatizePayload(payload));
+      const message = `Pago realizado correctamente, LPS ${amount} TransactionID: ${transactionID}`;
+      showMessage(message);
+      setLoading(false);
+      resetValues();
+    } catch ({ message }) {
+      setLoading(false);
+      showMessage(message, 'danger');
+      throw new Error(message);
+    }
+  });
+</script>
+
+</html>

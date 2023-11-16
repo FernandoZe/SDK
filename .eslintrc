@@ -1,0 +1,67 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "eqeqeq": [
+      "error",
+      "always"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "key-spacing": [
+      "error",
+      {
+        "afterColon": true,
+        "beforeColon": false,
+        "mode": "strict"
+      }
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "no-console": "error",
+    "comma-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "space-infix-ops": "error",
+    "object-curly-spacing": [
+      "error",
+      "always",
+      {
+        "arraysInObjects": false,
+        "objectsInObjects": false
+      }
+    ],
+    "space-before-blocks": "error",
+    "node/no-unpublished-require": 0,
+    "newline-before-return": "error",
+    "implicit-arrow-linebreak": [
+      "error",
+      "beside"
+    ],
+    "indent": [2, 2, { "SwitchCase": 1 }]
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "clinpays/sdk",
+    "description": "Sdk Dependencies Project",
+    "authors": [
+        {
+            "name": "FernandoZe",
+            "email": "fernandozelaya940@gmail.com"
+        }
+    ],
+    "require": {}
+}

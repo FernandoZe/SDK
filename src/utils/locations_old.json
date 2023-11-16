@@ -1,0 +1,208 @@
+[
+  {
+    "id": 1,
+    "name": "Honduras",
+    "numericCode": 340,
+    "callCode": 504,
+    "alpha2": "HN",
+    "states": [
+      {
+        "name": "Francisco Morazán",
+        "alpha2": "FM"
+      },
+      {
+        "name": "Atlántida",
+        "alpha2": "AT"
+      },
+      {
+        "name": "Choluteca",
+        "alpha2": "CH"
+      },
+      {
+        "name": "Colón",
+        "alpha2": "CL"
+      },
+      {
+        "name": "Comayagua",
+        "alpha2": "CM"
+      },
+      {
+        "name": "Copán",
+        "alpha2": "CP"
+      },
+      {
+        "name": "Cortés",
+        "alpha2": "CR"
+      },
+      {
+        "name": "El Paraíso",
+        "alpha2": "EP"
+      },
+      {
+        "name": "Gracias a Dios",
+        "alpha2": "GD"
+      },
+      {
+        "name": "Intibucá",
+        "alpha2": "IN"
+      },
+      {
+        "name": "Islas de la Bahía",
+        "alpha2": "IB"
+      },
+      {
+        "name": "La Paz",
+        "alpha2": "LP"
+      },
+      {
+        "name": "Lempira",
+        "alpha2": "LM"
+      },
+      {
+        "name": "Ocotepeque",
+        "alpha2": "OC"
+      },
+      {
+        "name": "Olancho",
+        "alpha2": "OL"
+      },
+      {
+        "name": "Santa Bárbara",
+        "alpha2": "SB"
+      },
+      {
+        "name": "Valle",
+        "alpha2": "VL"
+      },
+      {
+        "name": "Yoro",
+        "alpha2": "YO"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Nicaragua",
+    "numericCode": 558,
+    "alpha2": "NI",
+    "states": [
+      {
+        "name": "Boaco",
+        "alpha2": "BO"
+      },
+      {
+        "name": "Carazo",
+        "alpha2": "CA"
+      },
+      {
+        "name": "Chinandega",
+        "alpha2": "CI"
+      },
+      {
+        "name": "Chontales",
+        "alpha2": "CO"
+      },
+      {
+        "name": "Costa Caribe Norte",
+        "alpha2": "AN"
+      },
+      {
+        "name": "Costa Caribe Sur",
+        "alpha2": "AS"
+      },
+      {
+        "name": "Estelí",
+        "alpha2": "ES"
+      },
+      {
+        "name": "Granada",
+        "alpha2": "GR"
+      },
+      {
+        "name": "Jinotega",
+        "alpha2": "JI"
+      },
+      {
+        "name": "León",
+        "alpha2": "LE"
+      },
+      {
+        "name": "Madriz",
+        "alpha2": "MD"
+      },
+      {
+        "name": "Managua",
+        "alpha2": "MN"
+      },
+      {
+        "name": "Masaya",
+        "alpha2": "MS"
+      },
+      {
+        "name": "Matagalpa",
+        "alpha2": "MT"
+      },
+      {
+        "name": "Nueva Segovia",
+        "alpha2": "NS"
+      },
+      {
+        "name": "Rivas",
+        "alpha2": "RI"
+      },
+      {
+        "name": "Río San Juan",
+        "alpha2": "SJ"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Suriname",
+    "numericCode": 740,
+    "alpha2": "SR",
+    "alpha3Code": "SUR",
+    "states": [
+      {
+        "alpha2": "BR",
+        "name": "Brokopondo"
+      },
+      {
+        "alpha2": "CM",
+        "name": "Commewijne"
+      },
+      {
+        "alpha2": "CR",
+        "name": "Coronie"
+      },
+      {
+        "alpha2": "MA",
+        "name": "Marowijne"
+      },
+      {
+        "alpha2": "NI",
+        "name": "Nickerie"
+      },
+      {
+        "alpha2": "PR",
+        "name": "Para"
+      },
+      {
+        "alpha2": "PM",
+        "name": "Paramaribo"
+      },
+      {
+        "alpha2": "SA",
+        "name": "Saramacca"
+      },
+      {
+        "alpha2": "SI",
+        "name": "Sipaliwini"
+      },
+      {
+        "alpha2": "WA",
+        "name": "Wanica"
+      }
+    ]
+  }
+]

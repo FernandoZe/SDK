@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES6",
+    "module": "commonjs",
+    "lib": [ "ES6", "dom" ],
+    "outDir": "./build",
+    "strict": true,
+    "sourceMap": true,
+    "declaration": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": false,
+    "forceConsistentCasingInFileNames": true
+  }
+}
